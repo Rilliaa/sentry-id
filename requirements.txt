@@ -1,1 +1,14 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+wordcloud
+joblib
+torch
+transformers
+datasets
+streamlit
+emoji
+regex
 
