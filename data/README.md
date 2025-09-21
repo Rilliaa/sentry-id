@@ -5,7 +5,7 @@ Folder ini digunakan sebagai placeholder untuk dataset lokal.
 
 ## 📊 Ringkasan Dataset
 - **Sumber**: Komentar publik dari YouTube (±90% dari channel dengan konten mukbang, video dengan view tinggi).  
-- **Jumlah sampel**: 1.991 komentar  
+- **Jumlah sampel**: 2058 komentar  
 - **Distribusi kelas**:
   - NORMAL: 900
   - RISKY: 252 (termasuk 99 hasil augmentasi)
@@ -40,7 +40,7 @@ This folder is used as a placeholder for the local dataset.
 ## 📊 Dataset Summary
 
 * **Source**: Public YouTube comments (±90% from mukbang-related channels, high-view videos).
-* **Number of samples**: 1,991 comments
+* **Number of samples**: 2058 comments
 * **Class distribution**:
 
   * NORMAL: 900
