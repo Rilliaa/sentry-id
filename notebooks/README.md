@@ -1,92 +1,61 @@
-Tentu, Sir. Saya akan menyusun versi **Bahasa Inggris terlebih dahulu**, lalu diikuti dengan versi **Bahasa Indonesia** agar README.md Anda terlihat profesional dan mudah dipahami audiens internasional maupun lokal.
-
----
-
+## En Version
 ## 📊 Class Distribution
 
-The dataset consists of three main categories with two dominant classes and one significantly smaller minority class. The breakdown is as follows:
+The dataset consists of three main categories with two dominant classes and one significantly smaller minority class:
 
 * **PROMO\_JUDOL** : 906 samples
 * **NORMAL** : 900 samples
 * **RISKY** : 252 samples
 
-This indicates that the dataset is **not fully balanced**. The *RISKY* class has far fewer samples compared to the other two, which may affect model performance, particularly in terms of generalization on minority classes.
+This indicates that the dataset is **not fully balanced**, with *RISKY* being a minority class.
+
+![Class Distribution](data_distribution.png)
 
 ---
 
 ## 📈 Text Length Statistics per Class
 
-Descriptive statistics of text length (measured in characters and tokens) provide insight into the variation across each class. The detailed visualization can be found in **`statistic.png`**, with the summary below:
+Descriptive statistics of text length (both characters and tokens) provide insights into content variation across classes.
 
-* **NORMAL**
+* **NORMAL** → \~90 characters, \~15 tokens (high variation, up to 1072 chars)
+* **PROMO\_JUDOL** → \~60 characters, \~10 tokens (shorter, more concise)
+* **RISKY** → \~39 characters, \~7 tokens (mostly short, some long outliers)
 
-  * Average length: \~90 characters (up to 1072)
-  * Average tokens: \~15 tokens (up to 167)
-  * Shows a wide variation, ranging from very short to very long texts.
-
-* **PROMO\_JUDOL**
-
-  * Average length: \~60 characters (up to 338)
-  * Average tokens: \~10 tokens (up to 57)
-  * Generally shorter and more concise compared to NORMAL, with a more controlled distribution.
-
-* **RISKY**
-
-  * Average length: \~39 characters (up to 359)
-  * Average tokens: \~7 tokens (up to 56)
-  * Mostly short texts, though some outliers with much longer lengths exist.
-
----
+![Text Statistics](statistic.png)
 
 🔎 **Key Notes**:
 
-* The difference in text length distributions across classes may influence NLP model performance, especially during text representation.
-* Techniques such as **resampling**, **data augmentation**, or **model architecture adjustments** might be needed to ensure balanced performance across all classes.
+* Length variation may affect NLP model performance.
+* Techniques like **resampling**, **data augmentation**, or **architecture adjustments** may be required.
 
 ---
 
 ## 📊 Distribusi Kelas
 
-Dataset terdiri dari tiga kategori utama dengan dua kelas dominan serta satu kelas minoritas yang jauh lebih kecil. Rinciannya adalah sebagai berikut:
+Dataset terdiri dari tiga kategori utama dengan dua kelas dominan serta satu kelas minoritas:
 
 * **PROMO\_JUDOL** : 906 sampel
 * **NORMAL** : 900 sampel
 * **RISKY** : 252 sampel
 
-Hal ini menunjukkan bahwa dataset **tidak sepenuhnya seimbang**. Kelas *RISKY* memiliki jumlah data jauh lebih sedikit dibandingkan dua kelas lainnya, yang berpotensi memengaruhi kinerja model terutama dalam generalisasi terhadap kelas minoritas.
+Dataset ini **tidak sepenuhnya seimbang**, karena *RISKY* memiliki jumlah data jauh lebih sedikit.
+
+![Distribusi Kelas](data_distribution.png)
 
 ---
 
 ## 📈 Statistik Panjang Teks per Kelas
 
-Statistik deskriptif panjang teks (berdasarkan jumlah karakter dan token) memberikan gambaran variasi konten di tiap kelas. Visualisasi lengkap tersedia pada **`statistic.png`**, dengan ringkasan sebagai berikut:
+Statistik panjang teks (karakter & token) menggambarkan variasi konten pada tiap kelas:
 
-* **NORMAL**
+* **NORMAL** → ±90 karakter, ±15 token (variatif, hingga 1072 karakter)
+* **PROMO\_JUDOL** → ±60 karakter, ±10 token (lebih singkat & padat)
+* **RISKY** → ±39 karakter, ±7 token (cenderung pendek, ada outlier panjang)
 
-  * Rata-rata panjang: ±90 karakter (maksimal 1072)
-  * Rata-rata token: ±15 token (maksimal 167)
-  * Memiliki variasi yang tinggi, dari teks sangat pendek hingga sangat panjang.
-
-* **PROMO\_JUDOL**
-
-  * Rata-rata panjang: ±60 karakter (maksimal 338)
-  * Rata-rata token: ±10 token (maksimal 57)
-  * Lebih singkat dan padat dibanding kelas NORMAL, dengan distribusi yang lebih terkontrol.
-
-* **RISKY**
-
-  * Rata-rata panjang: ±39 karakter (maksimal 359)
-  * Rata-rata token: ±7 token (maksimal 56)
-  * Sebagian besar teks cukup pendek, meskipun terdapat beberapa outlier dengan panjang yang jauh lebih besar.
-
----
+![Statistik Teks](statistic.png)
 
 🔎 **Catatan Penting**:
 
-* Perbedaan distribusi panjang teks antar kelas dapat memengaruhi performa model NLP, khususnya pada tahap representasi teks.
-* Strategi seperti **resampling**, **augmentasi data**, atau **penyesuaian arsitektur model** mungkin diperlukan agar performa tetap seimbang di seluruh kelas.
-
----
-
-Apakah Anda ingin saya tambahkan **markdown table** untuk menampilkan ringkasan statistik (mean, min, max, dsb.) langsung di README, Sir?
+* Perbedaan distribusi panjang teks antar kelas dapat memengaruhi performa NLP.
+* Perlu strategi seperti **resampling**, **augmentasi data**, atau **penyesuaian model**.
 
