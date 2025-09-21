@@ -18,7 +18,6 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * **Baseline:** TF-IDF + Logistic Regression
 * **Fine-tuning:** IndoBERT / IndoBERTweet *(planned)*
 * **Evaluation:** F1-macro, confusion matrix, PR curve
-* **Demo:** Streamlit *(planned)*
 
 ---
 
@@ -27,7 +26,7 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * `data/` — dataset (placeholder, not pushed to GitHub)
 * `notebooks/` — EDA & model experiments
 * `src/` — Python modules (crawler, glossary)
-* `results/` —  Training Artefacts 
+* `results/` —  Training Artefacts & Demo 
 
 
 ---
@@ -60,7 +59,6 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * **Baseline:** TF-IDF + Logistic Regression
 * **Fine-tune:** IndoBERT / IndoBERTweet *(planned)*
 * **Evaluasi:** F1-macro, confusion matrix, PR curve
-* **Demo:** Streamlit *(planned)*
 
 ---
 
@@ -69,7 +67,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * `data/` — dataset (placeholder, tidak di-*push* ke GitHub)
 * `notebooks/` — EDA & eksperimen model
 * `src/` — modul Python (crawler, kamus jargon judol)
-* `results/` —  Artefak pelatihan
+* `results/` —  Artefak pelatihan & Demo
 
 
 ---
