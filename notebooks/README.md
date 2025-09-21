@@ -28,6 +28,8 @@ Descriptive statistics of text length (both characters and tokens) provide insig
 * Length variation may affect NLP model performance.
 * Techniques like **resampling**, **data augmentation**, or **architecture adjustments** may be required.
 
+For further exploration, proceed check on this file **[eda.ipynb](eda.ipynb)**.
+
 ---
 
 ## 🇮🇩 Versi Bahasa Indonesia 
@@ -60,4 +62,6 @@ Statistik panjang teks (karakter & token) menggambarkan variasi konten pada tiap
 
 * Perbedaan distribusi panjang teks antar kelas dapat memengaruhi performa NLP.
 * Perlu strategi seperti **resampling**, **augmentasi data**, atau **penyesuaian model**.
+
+Untuk eksplorasi lebih mendalam, silakan lihat file **[eda.ipynb](eda.ipynb)**.
 
