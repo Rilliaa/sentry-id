@@ -1,7 +1,7 @@
 ## ID
 ---
 Folder ini digunakan sebagai placeholder untuk dataset lokal.  
-**Dataset tidak diunggah ke GitHub** karena alasan ukuran, etika, dan privasi.
+**Dataset tidak diunggah ke GitHub** karena alasan etika, dan privasi.
 
 ## 📊 Ringkasan Dataset
 - **Sumber**: Komentar publik dari YouTube (±90% dari channel dengan konten mukbang, video dengan view tinggi).  
@@ -35,7 +35,7 @@ Folder ini digunakan sebagai placeholder untuk dataset lokal.
 ---
 
 This folder is used as a placeholder for the local dataset.
-**The dataset is not uploaded to GitHub** due to size, ethical, and privacy considerations.
+**The dataset is not uploaded to GitHub** due to ethical, and privacy considerations.
 
 ## 📊 Dataset Summary
 
