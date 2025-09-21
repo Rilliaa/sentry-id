@@ -30,8 +30,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 
 * `data/` — dataset (placeholder, tidak di-*push* ke GitHub)
 * `notebooks/` — EDA & eksperimen model
-* `src/` — modul Python (crawler, preprocessing, training)
-* `glossary/` — kamus jargon judol
+* `src/` — modul Python (crawler, kamus jargon judol)
 * `reports/` — hasil eksperimen (figures, JSON, dsb.)
 
 ---
