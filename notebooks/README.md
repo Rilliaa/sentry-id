@@ -30,7 +30,7 @@ Descriptive statistics of text length (both characters and tokens) provide insig
 
 ---
 
-# 🇮🇩 Versi Bahasa Indonesia 
+## 🇮🇩 Versi Bahasa Indonesia 
 
 ## 📊 Distribusi Kelas
 
