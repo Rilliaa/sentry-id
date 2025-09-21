@@ -1,4 +1,4 @@
-## En Version
+## 🇬🇧 English Version
 ## 📊 Class Distribution
 
 The dataset consists of three main categories with two dominant classes and one significantly smaller minority class:
@@ -29,6 +29,8 @@ Descriptive statistics of text length (both characters and tokens) provide insig
 * Techniques like **resampling**, **data augmentation**, or **architecture adjustments** may be required.
 
 ---
+
+# 🇮🇩 Versi Bahasa Indonesia 
 
 ## 📊 Distribusi Kelas
 
