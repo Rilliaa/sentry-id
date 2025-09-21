@@ -26,9 +26,7 @@ Folder ini digunakan sebagai placeholder untuk dataset lokal.
 ## ⚠️ Catatan
 - Dataset ini hanya digunakan untuk **riset NLP dan tujuan akademis**.  
 - Tidak mengandung informasi pribadi (PII).  
-- Data asli disimpan secara lokal.  👉 Jika ingin mereplikasi eksperimen, simpan dataset Anda ke path:
-
-Berikut versi bahasa Inggris dari README.md Anda, Sir:
+- Data asli disimpan secara lokal.  
 
 ---
 
@@ -66,8 +64,6 @@ This folder is used as a placeholder for the local dataset.
 
 * This dataset is intended **solely for NLP research and academic purposes**.
 * It does not contain personally identifiable information (PII).
-* The original data is stored locally. 👉 To replicate the experiments, place your dataset in the following path:
+* The original data is stored locally. 
 
 ---
-
-Would you like me to make it more **formal and academic-style** (as if for a published research dataset), or keep it in this **straightforward GitHub-friendly style**, Sir?
