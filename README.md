@@ -37,10 +37,10 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * Dataset comes from **public YouTube comments**.
 * Used strictly for **academic & NLP research purposes**.
 * No **PII (Personally Identifiable Information)** is included.
+* The author does not recommend any gambling related activities at all.
 
-**🇮🇩 Bahasa Indonesia** 
+  ---
 
----
 
 ## 🇮🇩 Versi Bahasa Indonesia
 
@@ -79,6 +79,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * Dataset diambil dari **komentar publik YouTube**.
 * Digunakan hanya untuk **tujuan akademis & riset NLP**.
 * Tidak ada **PII (Personal Identifiable Information)** yang disertakan.
+* Penulis sama sekali tidak merekomendasikan kegiatan yang berhubungan dengan judi online 
 
 ---
 
