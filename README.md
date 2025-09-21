@@ -1,4 +1,4 @@
-# 🛡️ Sentry-ID Level 1 — MVP Judol Detector
+# 🛡️ Sentry-ID Level 1 — MVP Gambling Detector
 
 ## 🇬🇧 English Version
 
