@@ -1,6 +1,44 @@
 # 🛡️ Sentry-ID Level 1 — MVP Judol Detector
 
-**🇮🇩 Bahasa Indonesia** | [🇬🇧 English](#english-version)
+## 🇬🇧 English Version
+
+### 🎯 Project Description
+
+Sentry-ID is an experimental text detection project designed to identify **online gambling (judol)** promotional content in Indonesian.
+At this first stage (Level 1), the focus is to classify YouTube comments into three classes:
+
+* **PROMO\_JUDOL** — promotional/invitation content
+* **RISKY** — mentions gambling/slots without promotion (e.g., news, opinion, discussion)
+* **NORMAL** — general comments
+
+---
+
+### 🚀 Project Output
+
+* **Baseline:** TF-IDF + Logistic Regression
+* **Fine-tuning:** IndoBERT / IndoBERTweet *(planned)*
+* **Evaluation:** F1-macro, confusion matrix, PR curve
+* **Demo:** Streamlit *(planned)*
+
+---
+
+### 📂 Repository Structure
+
+* `data/` — dataset (placeholder, not pushed to GitHub)
+* `notebooks/` — EDA & model experiments
+* `src/` — Python modules (crawler, glossary)
+* `results/` —  Training Artefacts 
+
+
+---
+
+### ⚖️ Ethics & Limitations
+
+* Dataset comes from **public YouTube comments**.
+* Used strictly for **academic & NLP research purposes**.
+* No **PII (Personally Identifiable Information)** is included.
+
+**🇮🇩 Bahasa Indonesia** 
 
 ---
 
@@ -31,7 +69,8 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * `data/` — dataset (placeholder, tidak di-*push* ke GitHub)
 * `notebooks/` — EDA & eksperimen model
 * `src/` — modul Python (crawler, kamus jargon judol)
-* `reports/` — hasil eksperimen (figures, JSON, dsb.)
+* `results/` —  Artefak pelatihan
+
 
 ---
 
@@ -43,40 +82,4 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 
 ---
 
-## 🇬🇧 English Version
 
-### 🎯 Project Description
-
-Sentry-ID is an experimental text detection project designed to identify **online gambling (judol)** promotional content in Indonesian.
-At this first stage (Level 1), the focus is to classify YouTube comments into three classes:
-
-* **PROMO\_JUDOL** — promotional/invitation content
-* **RISKY** — mentions gambling/slots without promotion (e.g., news, opinion, discussion)
-* **NORMAL** — general comments
-
----
-
-### 🚀 Project Output
-
-* **Baseline:** TF-IDF + Logistic Regression
-* **Fine-tuning:** IndoBERT / IndoBERTweet *(planned)*
-* **Evaluation:** F1-macro, confusion matrix, PR curve
-* **Demo:** Streamlit *(planned)*
-
----
-
-### 📂 Repository Structure
-
-* `data/` — dataset (placeholder, not pushed to GitHub)
-* `notebooks/` — EDA & model experiments
-* `src/` — Python modules (crawler, preprocessing, training)
-* `glossary/` — judol jargon dictionary
-* `reports/` — experiment results (figures, JSON, etc.)
-
----
-
-### ⚖️ Ethics & Limitations
-
-* Dataset comes from **public YouTube comments**.
-* Used strictly for **academic & NLP research purposes**.
-* No **PII (Personally Identifiable Information)** is included.
