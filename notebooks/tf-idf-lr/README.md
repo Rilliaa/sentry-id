@@ -96,7 +96,7 @@ Kinerja klasifikasi dievaluasi pada **validation set** dan **test set**. Metrik 
 
 ### 🔹 Dengan Augmentasi
 
-![Evaluation Report With Augmentation](eval_test_with_augmentation.png)
+![Evaluation Report With Augmentation](eval_test_with_augmention.png)
 
 **Wawasan Utama**
 
@@ -108,7 +108,7 @@ Kinerja klasifikasi dievaluasi pada **validation set** dan **test set**. Metrik 
 
 ### 🔹 Tanpa Augmentasi
 
-![Evaluation Report Without Augmentation](eval_test_without_augmentation.png)
+![Evaluation Report Without Augmentation](eval_test_without_augmention.png)
 
 **Wawasan Utama**
 
