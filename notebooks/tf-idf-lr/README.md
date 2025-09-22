@@ -59,7 +59,7 @@ Data augmentation improved the model’s robustness, especially for minority cla
 
 ---
 
-# 📄 Ringkasan dalam Bahasa Indonesia
+# ID
 
 ---
 
