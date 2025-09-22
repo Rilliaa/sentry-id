@@ -31,7 +31,7 @@ The classification performance is evaluated on both **validation** and **test** 
 
 ### 🔹 With Augmentation
 
-![Evaluation Report With Augmentation](eval_test_with_augmentation.png)
+![Evaluation Report With Augmentation](eval_test_with_augmention.png)
 
 **Key Insights**
 
@@ -43,7 +43,7 @@ The classification performance is evaluated on both **validation** and **test** 
 
 ### 🔹 Without Augmentation
 
-![Evaluation Report Without Augmentation](eval_test_without_augmentation.png)
+![Evaluation Report Without Augmentation](eval_test_without_augmention.png)
 
 **Key Insights**
 
