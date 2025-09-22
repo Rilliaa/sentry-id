@@ -5,7 +5,7 @@ This folder contains experiments using **TF-IDF features combined with Logistic 
 
 The results include:
 
-* Jupyter/Colab notebook (`Baseline_tfidf_lr_compare_aug.ipynb`)
+* Jupyter/Colab notebook (`TF-IDF_LR.ipynb`)
 * Confusion matrix visualizations (with & without augmentation)
 * Evaluation reports (precision, recall, f1-score, and accuracy)
 
@@ -70,7 +70,7 @@ Folder ini berisi eksperimen menggunakan **TF-IDF dan Logistic Regression** seba
 
 Hasil yang tersedia meliputi:
 
-* Notebook Jupyter/Colab (`Baseline_tfidf_lr_compare_aug.ipynb`)
+* Notebook Jupyter/Colab (`TF-IDF_LR.ipynb`)
 * Visualisasi confusion matrix (dengan & tanpa augmentasi)
 * Laporan evaluasi (precision, recall, f1-score, dan accuracy)
 
