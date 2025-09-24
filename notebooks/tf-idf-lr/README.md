@@ -122,7 +122,4 @@ Kinerja klasifikasi dievaluasi pada **validation set** dan **test set**. Metrik 
 
 Augmentasi data meningkatkan ketahanan model, terutama pada kelas minoritas seperti *RISKY*. Meskipun kedua skenario menunjukkan performa baik, penggunaan augmentasi memberikan akurasi sedikit lebih tinggi serta hasil yang lebih konsisten di semua kelas.
 
----
-
-Apakah Anda ingin saya tambahkan **tabel ringkas perbandingan metrik utama (akurasi, macro avg f1)** agar lebih mudah dibaca cepat, Sir?
 
