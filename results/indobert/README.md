@@ -1,12 +1,3 @@
-Dipahami, Sir ⚡. Jadi untuk folder **results** di versi **IndoBERTweet**, narasinya perlu menyesuaikan karena:
-
-* Yang di-*upload* ke repo GitHub hanya **demo notebook** dan **screenshot hasil demo**.
-* Artefak model penuh (file `config.json`, `model.safetensors`, `vocab.txt`, dll) **tidak dimasukkan** karena ukurannya besar, melainkan tersedia lewat link Google Drive.
-
-Berikut narasi README versi IndoBERTweet dengan gaya konsisten seperti template TF-IDF:
-
----
-
 ## EN
 
 This folder contains the **demo environment** for the fine-tuned **IndoBERTweet** model trained on the augmented dataset.
