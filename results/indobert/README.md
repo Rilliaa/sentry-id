@@ -1,6 +1,6 @@
 ## EN
 
-This folder contains the **demo environment** for the fine-tuned **IndoBERTweet** model trained on the augmented dataset.
+This folder contains the result and **demo environment** for the fine-tuned **IndoBERTweet** model trained on the augmented dataset.
 Due to large file size, the full model artifacts are **not uploaded to GitHub** but are accessible via Google Drive:
 [🔗 Download Model Artifacts](https://drive.google.com/drive/folders/1wR184orAxaicI8yyW7F_XDI--nQiNEWV?usp=sharing)
 
@@ -75,7 +75,7 @@ The complete model artifacts are hosted on Google Drive due to size limitations.
 
 ## ID
 
-Folder ini berisi **lingkungan demo** untuk model **IndoBERTweet** yang telah di-*fine-tune* menggunakan dataset dengan augmentasi.
+Folder ini berisi hasil dan **lingkungan demo** untuk model **IndoBERTweet** yang telah di-*fine-tune* menggunakan dataset dengan augmentasi.
 Karena ukuran file model yang sangat besar, artefak lengkap tidak di-*upload* ke GitHub, tetapi tersedia melalui Google Drive:
 [🔗 Unduh Artefak Model](https://drive.google.com/drive/folders/1wR184orAxaicI8yyW7F_XDI--nQiNEWV?usp=sharing)
 
