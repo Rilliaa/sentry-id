@@ -128,6 +128,4 @@ new_comments = [
 
 Demo ini membuktikan bahwa model dan vectorizer hasil ekspor berjalan dengan baik. Prediksi sesuai ekspektasi: teks bernuansa promosi/judi terklasifikasi sebagai *PROMO\_JUDOL* atau *RISKY*, sedangkan teks santai/non-risiko diklasifikasikan sebagai *NORMAL*.
 
----
 
-Apakah Anda ingin saya menambahkan **tabel ringkasan probabilitas per komentar** agar hasilnya lebih mudah dibandingkan secara visual, Sir?
