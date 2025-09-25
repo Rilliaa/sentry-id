@@ -95,6 +95,7 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * **IndoBERTweet + augmentation** achieved the best results (Accuracy: 99.0%, Macro F1: 99.3%).
 * Augmentation consistently improved performance, especially for minority class *RISKY*.
 * TF-IDF + Logistic Regression remains a solid baseline but is outperformed by transformer-based fine-tuning.
+* Future research is encouraged to specifically enrich the variety of RISKY comments, enabling the model to better capture borderline text patterns and improve classification accuracy in ambiguous cases
 
 ---
 
@@ -204,6 +205,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * **IndoBERTweet + augmentasi** adalah kombinasi terbaik (Akurasi: 99.0%, Macro F1: 99.3%).
 * Augmentasi terbukti membantu, terutama untuk meningkatkan deteksi kelas minoritas.
 * Baseline TF-IDF + Logistic Regression masih kompetitif, namun kalah jauh dari pendekatan transformer.
+* Penelitian selanjutnya disarankan untuk secara khusus memperkaya variasi komentar kategori RISKY, sehingga model dapat mengenali pola teks borderline secara lebih baik dan meningkatkan ketepatan klasifikasi pada kasus ambigu
 
 ---
 
