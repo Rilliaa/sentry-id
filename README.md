@@ -147,11 +147,25 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * Macro F1: **0.993**
 * Performa sangat stabil pada semua kelas, termasuk kelas minoritas *RISKY*.
 
+```
+              precision    recall  f1-score   support
+      NORMAL      0.989     0.989     0.989        90
+ PROMO_JUDOL      0.989     0.989     0.989        91
+       RISKY      1.000     1.000     1.000        25
+```
+
 **Tanpa Augmentasi**
 
 * Akurasi: **0.969**
 * Macro F1: **0.958**
 * Masih kuat, tetapi recall untuk *RISKY* lebih rendah.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.967     0.978     0.972        90
+ PROMO_JUDOL      0.967     0.978     0.973        91
+       RISKY      1.000     0.867     0.929        15
+```
 
 ---
 
@@ -163,11 +177,25 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * Macro F1: **0.939**
 * Performa seimbang, meski lebih lemah dibanding model BERT.
 
+```
+              precision    recall  f1-score   support
+      NORMAL      0.889     0.978     0.931        90
+ PROMO_JUDOL      0.976     0.879     0.925        91
+       RISKY      0.960     0.960     0.960        25
+```
+
 **Tanpa Augmentasi**
 
 * Akurasi: **0.923**
 * Macro F1: **0.914**
 * Cenderung kesulitan mengenali kelas *RISKY*.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.897     0.967     0.930        90
+ PROMO_JUDOL      0.943     0.901     0.921        91
+       RISKY      1.000     0.800     0.889        15
+```
 
 ---
 
