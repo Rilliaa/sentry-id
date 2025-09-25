@@ -17,7 +17,7 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 
 * **Baseline:** TF-IDF + Logistic Regression
 * **Fine-tuning:** IndoBERTweet
-* **Evaluation:** F1-macro, confusion matrix, PR curve
+* **Evaluation:** F1-macro, and confusion matrix
 
 ---
 
@@ -124,7 +124,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 
 * **Baseline:** TF-IDF + Logistic Regression
 * **Fine-tune:** IndoBERTweet
-* **Evaluasi:** F1-macro, confusion matrix, PR curve
+* **Evaluasi:** F1-macro, dan confusion matrix
 
 ---
 
