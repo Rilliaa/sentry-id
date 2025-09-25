@@ -26,8 +26,75 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * `data/` — dataset (placeholder, not pushed to GitHub)
 * `notebooks/` — EDA & model experiments
 * `src/` — Python modules (crawler, glossary)
-* `results/` —  Training Artefacts & Demo 
+* `results/` — Training artefacts & demo
 
+---
+
+### 📊 Model Evaluation
+
+#### IndoBERTweet (Fine-tuned)
+
+**With Augmentation**
+
+* Accuracy: **0.990**
+* Macro F1: **0.993**
+* Performance is highly stable across all classes, including minority class *RISKY*.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.989     0.989     0.989        90
+ PROMO_JUDOL      0.989     0.989     0.989        91
+       RISKY      1.000     1.000     1.000        25
+```
+
+**Without Augmentation**
+
+* Accuracy: **0.969**
+* Macro F1: **0.958**
+* Strong results overall, but lower recall for *RISKY*.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.967     0.978     0.972        90
+ PROMO_JUDOL      0.967     0.978     0.973        91
+       RISKY      1.000     0.867     0.929        15
+```
+
+---
+
+#### TF-IDF + Logistic Regression (Baseline)
+
+**With Augmentation**
+
+* Accuracy: **0.932**
+* Macro F1: **0.939**
+* Balanced performance, slightly weaker than BERT-based approach.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.889     0.978     0.931        90
+ PROMO_JUDOL      0.976     0.879     0.925        91
+       RISKY      0.960     0.960     0.960        25
+```
+
+**Without Augmentation**
+
+* Accuracy: **0.923**
+* Macro F1: **0.914**
+* Shows difficulty in detecting *RISKY* reliably.
+
+```
+              precision    recall  f1-score   support
+      NORMAL      0.897     0.967     0.930        90
+ PROMO_JUDOL      0.943     0.901     0.921        91
+       RISKY      1.000     0.800     0.889        15
+```
+
+📌 **Summary:**
+
+* **IndoBERTweet + augmentation** achieved the best results (Accuracy: 99.0%, Macro F1: 99.3%).
+* Augmentation consistently improved performance, especially for minority class *RISKY*.
+* TF-IDF + Logistic Regression remains a solid baseline but is outperformed by transformer-based fine-tuning.
 
 ---
 
@@ -38,8 +105,7 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 * No **PII (Personally Identifiable Information)** is included.
 * The author does not recommend any gambling related activities at all.
 
-  ---
-
+---
 
 ## 🇮🇩 Versi Bahasa Indonesia
 
@@ -67,8 +133,49 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * `data/` — dataset (placeholder, tidak di-*push* ke GitHub)
 * `notebooks/` — EDA & eksperimen model
 * `src/` — modul Python (crawler, kamus jargon judol)
-* `results/` —  Artefak pelatihan & Demo
+* `results/` — artefak pelatihan & demo
 
+---
+
+### 📊 Evaluasi Model
+
+#### IndoBERTweet (Fine-tuned)
+
+**Dengan Augmentasi**
+
+* Akurasi: **0.990**
+* Macro F1: **0.993**
+* Performa sangat stabil pada semua kelas, termasuk kelas minoritas *RISKY*.
+
+**Tanpa Augmentasi**
+
+* Akurasi: **0.969**
+* Macro F1: **0.958**
+* Masih kuat, tetapi recall untuk *RISKY* lebih rendah.
+
+---
+
+#### TF-IDF + Logistic Regression (Baseline)
+
+**Dengan Augmentasi**
+
+* Akurasi: **0.932**
+* Macro F1: **0.939**
+* Performa seimbang, meski lebih lemah dibanding model BERT.
+
+**Tanpa Augmentasi**
+
+* Akurasi: **0.923**
+* Macro F1: **0.914**
+* Cenderung kesulitan mengenali kelas *RISKY*.
+
+---
+
+📌 **Ringkasan:**
+
+* **IndoBERTweet + augmentasi** adalah kombinasi terbaik (Akurasi: 99.0%, Macro F1: 99.3%).
+* Augmentasi terbukti membantu, terutama untuk meningkatkan deteksi kelas minoritas.
+* Baseline TF-IDF + Logistic Regression masih kompetitif, namun kalah jauh dari pendekatan transformer.
 
 ---
 
@@ -77,8 +184,5 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 * Dataset diambil dari **komentar publik YouTube**.
 * Digunakan hanya untuk **tujuan akademis & riset NLP**.
 * Tidak ada **PII (Personal Identifiable Information)** yang disertakan.
-* Penulis sama sekali tidak merekomendasikan kegiatan yang berhubungan dengan judi online 
-
----
-
+* Penulis sama sekali tidak merekomendasikan kegiatan yang berhubungan dengan judi online.
 
