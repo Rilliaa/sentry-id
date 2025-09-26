@@ -1,4 +1,7 @@
 # 🛡️ Sentry-ID Level 1 — MVP Gambling Detector
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)]()
+[![HuggingFace](https://img.shields.io/badge/HF-Transformers-yellow.svg)](https://huggingface.co)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 
 ## 🇬🇧 English Version
 
