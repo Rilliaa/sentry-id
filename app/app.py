@@ -9,9 +9,9 @@ import numpy as np
 # ==============================
 @st.cache_resource
 def load_tfidf():
-    model = joblib.load("results/tfidf/logreg_model_with_aug.joblib")
-    vec_word = joblib.load("results/tfidf/tfidf_word_vecctorizer_with_aug.joblib")
-    vec_char = joblib.load("results/tfidf/tfidf_char_vecctorizer_with_aug.joblib")
+    model = joblib.load("results/tf-idf/logreg_model_with_aug.joblib")
+    vec_word = joblib.load("results/tf-idf/tfidf_word_vectorizer_with_aug.joblib")
+    vec_char = joblib.load("results/tf-idf/tfidf_char_vectorizer_with_aug.joblib")
     return model, vec_word, vec_char
 
 # ==============================
