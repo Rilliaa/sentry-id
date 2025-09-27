@@ -98,7 +98,7 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
 Try our interactive demo on **Streamlit Cloud**:  
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sentry-id-ww5vv8cgu4cfmbudssbdeg.streamlit.app/)
 
-For detailed usage and code examples, see the [app folder](sentry-id/app).
+For detailed usage and code examples, see the [app folder](app).
 
 📌 **Summary:**
 
@@ -215,7 +215,7 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 Coba demo interaktif kami di **Streamlit Cloud**:  
 [![Buka di Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sentry-id-ww5vv8cgu4cfmbudssbdeg.streamlit.app/)
 
-Untuk panduan penggunaan dan contoh kode lebih lengkap, silakan lihat di [folder app](sentry-id/app).
+Untuk panduan penggunaan dan contoh kode lebih lengkap, silakan lihat di [folder app](app).
 
 
 📌 **Ringkasan:**
