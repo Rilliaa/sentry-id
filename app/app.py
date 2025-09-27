@@ -19,7 +19,7 @@ def load_tfidf():
 # ==============================
 @st.cache_resource
 def load_indobertweet():
-    model_name = "rilliaa/IndoBERTweet_with_aug"  # ganti dengan repo HF Anda
+    model_name = "rilliaa/IndoBERTweet_with_aug" 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(model_name)
     return tokenizer, model
@@ -34,7 +34,8 @@ def predict_tfidf(text, model, vec_word, vec_char):
     X = hstack([X_word, X_char])
     probs = model.predict_proba(X)[0]
     pred = model.classes_[np.argmax(probs)]
-    return pred, dict(zip(model.classes_, probs))
+    probs_percent = {cls: round(prob * 100, 2) for cls, prob in zip(model.classes_, probs)}
+    return pred, probs_percent
 
 def predict_indobertweet(text, tokenizer, model):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
@@ -43,7 +44,8 @@ def predict_indobertweet(text, tokenizer, model):
         probs = torch.nn.functional.softmax(outputs.logits, dim=-1)[0].numpy()
     pred_id = np.argmax(probs)
     labels = list(model.config.id2label.values())
-    return labels[pred_id], dict(zip(labels, probs))
+    probs_percent = {label: round(prob * 100, 2) for label, prob in zip(labels, probs)}
+    return labels[pred_id], probs_percent
 
 # ==============================
 # Streamlit UI
