@@ -34,7 +34,7 @@ def predict_tfidf(text, model, vec_word, vec_char):
     X = hstack([X_word, X_char])
     probs = model.predict_proba(X)[0]
     pred = model.classes_[np.argmax(probs)]
-    probs_percent = {cls: round(prob * 100, 2) for cls, prob in zip(model.classes_, probs)}
+    probs_percent = {cls: f"{prob * 100:.2f}%" for cls, prob in zip(model.classes_, probs)}
     return pred, probs_percent
 
 def predict_indobertweet(text, tokenizer, model):
@@ -44,8 +44,9 @@ def predict_indobertweet(text, tokenizer, model):
         probs = torch.nn.functional.softmax(outputs.logits, dim=-1)[0].numpy()
     pred_id = np.argmax(probs)
     labels = list(model.config.id2label.values())
-    probs_percent = {label: round(prob * 100, 2) for label, prob in zip(labels, probs)}
+    probs_percent = {label: f"{prob * 100:.2f}%" for label, prob in zip(labels, probs)}
     return labels[pred_id], probs_percent
+
 
 # ==============================
 # Streamlit UI
