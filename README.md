@@ -93,6 +93,13 @@ At this first stage (Level 1), the focus is to classify YouTube comments into th
        RISKY      1.000     0.800     0.889        15
 ```
 
+## 🚀 Live Demo
+
+Try our interactive demo on **Streamlit Cloud**:  
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sentry-id-ww5vv8cgu4cfmbudssbdeg.streamlit.app/)
+
+For detailed usage and code examples, see the [app folder](sentry-id/app).
+
 📌 **Summary:**
 
 * **IndoBERTweet + augmentation** achieved the best results (Accuracy: 99.0%, Macro F1: 99.3%).
@@ -202,6 +209,14 @@ Fokus tahap awal (Level 1) adalah klasifikasi komentar YouTube ke dalam tiga kel
 ```
 
 ---
+
+## 🚀 Demo Langsung
+
+Coba demo interaktif kami di **Streamlit Cloud**:  
+[![Buka di Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://sentry-id-ww5vv8cgu4cfmbudssbdeg.streamlit.app/)
+
+Untuk panduan penggunaan dan contoh kode lebih lengkap, silakan lihat di [folder app](sentry-id/app).
+
 
 📌 **Ringkasan:**
 
