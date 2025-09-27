@@ -22,7 +22,7 @@ Usage:
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
-model_name = "rilliaa/sentry-id-indobertweet"
+model_name = "rilliaa/IndoBERTweet_with_aug"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
