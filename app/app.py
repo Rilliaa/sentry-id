@@ -19,7 +19,7 @@ def load_tfidf():
 # ==============================
 @st.cache_resource
 def load_indobertweet():
-    model_name = "rilliaa//sentry-id-indobertweet"  # ganti dengan repo HF Anda
+    model_name = "rilliaa/IndoBERTweet_with_aug"  # ganti dengan repo HF Anda
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(model_name)
     return tokenizer, model
