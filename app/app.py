@@ -1,86 +1,66 @@
-# app/app.py
-# 🛡️ Sentry-ID Level 1 — Streamlit Demo
-
 import streamlit as st
 import joblib
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
 
-# -----------------------------
-# Page Config
-# -----------------------------
-st.set_page_config(
-    page_title="Sentry-ID Judol Detector",
-    page_icon="🛡️",
-    layout="centered"
-)
-
-st.title("🛡️ Sentry-ID Level 1 — MVP Gambling Detector")
-st.markdown("Klasifikasi komentar YouTube ke dalam **PROMO_JUDOL**, **RISKY**, atau **NORMAL**.")
-
-# -----------------------------
-# Load Models
-# -----------------------------
-
+# ==============================
+# Load TF-IDF artefak
+# ==============================
 @st.cache_resource
-def load_tfidf_model():
-    word_vectorizer = joblib.load("results/tfidf/tfidf_word_vecctorizer_with_aug.joblib")
+def load_tfidf():
     model = joblib.load("results/tfidf/logreg_model_with_aug.joblib")
-    return word_vectorizer, model
+    vec_word = joblib.load("results/tfidf/tfidf_word_vecctorizer_with_aug.joblib")
+    vec_char = joblib.load("results/tfidf/tfidf_char_vecctorizer_with_aug.joblib")
+    return model, vec_word, vec_char
 
+# ==============================
+# Load IndoBERTweet dari HF Hub
+# ==============================
 @st.cache_resource
-def load_indobertweet_model():
-    model_name = "indolem/indobertweet-base-uncased"
+def load_indobertweet():
+    model_name = "rilliaa//sentry-id-indobertweet"  # ganti dengan repo HF Anda
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForSequenceClassification.from_pretrained(
-        "results/indobertweet"  # ganti ke path lokal model Anda
-    )
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
     return tokenizer, model
 
-word_vectorizer, tfidf_model = load_tfidf_model()
-tokenizer, indobert_model = load_indobertweet_model()
+# ==============================
+# Prediction functions
+# ==============================
+def predict_tfidf(text, model, vec_word, vec_char):
+    X_word = vec_word.transform([text])
+    X_char = vec_char.transform([text])
+    from scipy.sparse import hstack
+    X = hstack([X_word, X_char])
+    probs = model.predict_proba(X)[0]
+    pred = model.classes_[np.argmax(probs)]
+    return pred, dict(zip(model.classes_, probs))
 
-label_names = ["NORMAL", "PROMO_JUDOL", "RISKY"]
-
-# -----------------------------
-# Prediction Functions
-# -----------------------------
-def predict_tfidf(text):
-    vec = word_vectorizer.transform([text])
-    probs = tfidf_model.predict_proba(vec)[0]
-    pred = label_names[np.argmax(probs)]
-    return pred, dict(zip(label_names, probs))
-
-def predict_indobert(text):
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=128)
+def predict_indobertweet(text, tokenizer, model):
+    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     with torch.no_grad():
-        outputs = indobert_model(**inputs)
-        probs = torch.nn.functional.softmax(outputs.logits, dim=-1)[0].cpu().numpy()
-    pred = label_names[np.argmax(probs)]
-    return pred, dict(zip(label_names, probs))
+        outputs = model(**inputs)
+        probs = torch.nn.functional.softmax(outputs.logits, dim=-1)[0].numpy()
+    pred_id = np.argmax(probs)
+    labels = list(model.config.id2label.values())
+    return labels[pred_id], dict(zip(labels, probs))
 
-# -----------------------------
-# UI
-# -----------------------------
-st.sidebar.header("⚙️ Settings")
-model_choice = st.sidebar.radio(
-    "Pilih model:",
-    ["TF-IDF + Logistic Regression", "IndoBERTweet"]
-)
+# ==============================
+# Streamlit UI
+# ==============================
+st.title("🛡️ Sentry-ID Level 1 — MVP Gambling Detector")
 
-user_input = st.text_area("💬 Masukkan komentar YouTube:", "")
+option = st.sidebar.selectbox("Choose Model:", ["TF-IDF + Logistic Regression", "IndoBERTweet"])
 
-if st.button("🔍 Deteksi"):
-    if not user_input.strip():
-        st.warning("Silakan masukkan komentar terlebih dahulu.")
+text = st.text_area("Enter a YouTube comment:", height=100)
+
+if st.button("Predict"):
+    if option == "TF-IDF + Logistic Regression":
+        model, vec_word, vec_char = load_tfidf()
+        pred, probs = predict_tfidf(text, model, vec_word, vec_char)
     else:
-        if model_choice == "TF-IDF + Logistic Regression":
-            pred, probs = predict_tfidf(user_input)
-        else:
-            pred, probs = predict_indobert(user_input)
+        tokenizer, model = load_indobertweet()
+        pred, probs = predict_indobertweet(text, tokenizer, model)
 
-        st.markdown(f"### ✅ Prediksi: **{pred}**")
-        st.write("Probabilitas:")
-        st.json({k: float(v) for k, v in probs.items()})
-
+    st.markdown(f"### 🔮 Prediction: **{pred}**")
+    st.json(probs)
